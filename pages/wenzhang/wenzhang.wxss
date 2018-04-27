@@ -1,2 +1,15 @@
 /* pages/wenzhang/wenzhang.wxss */
 @import "../wxParse/wxParse.wxss";
+
+ view{
+  text-indent: 70rpx;
+}
+.title{
+margin-left: 250rpx;
+font-size: 50rpx;
+    color: #666;
+}
+.control {
+   text-indent: 0rpx;
+   display : flex
+}

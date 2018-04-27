@@ -1,4 +1,9 @@
 <!--pages/wenzhang/wenzhang.wxml-->
 <import src="../wxParse/wxParse.wxml"/>
+<view class='control'>
+<button bindtap='prev'>上一篇</button>
+<button bindtap='next'>下一篇</button>
 
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<text class='title'>{{title}}</text>
+<template class="wxParse1" is="wxParse" data="{{wxParseData:article.nodes}}"/>
