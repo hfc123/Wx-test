@@ -2,7 +2,9 @@
 <view>
 <button bindtap='loadindex'>11111</button>
 <view wx:for="{{itemlist}}" wx:key="key" >
+<view bindtap='tovideo({{item.data.playUrl}})'>
 <text>{{item.data.id}}</text>
 <image src="{{item.data.cover.feed}}"></image>
+</view>
 </view>
 </view>

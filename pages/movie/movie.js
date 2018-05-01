@@ -119,5 +119,10 @@ Page({
         console.log(err)
       }
     })
+  },
+  tovideo:function(videourl){
+    wx.navigateTo({
+      url:"./video/video"+ videourl
+    })
   }
 })
