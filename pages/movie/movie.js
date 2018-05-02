@@ -120,9 +120,13 @@ Page({
       }
     })
   },
-  tovideo:function(videourl){
+  tovideo: function (event){
+    var videourl=event.currentTarget.dataset.albumlist
+    console.log(videourl)
+    videourl=videourl.replace("?","&")
     wx.navigateTo({
-      url:"./video/video"+ videourl
+
+      url:"../video/video?url="+ videourl
     })
   }
 })

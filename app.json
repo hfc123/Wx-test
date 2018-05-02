@@ -3,8 +3,8 @@
     "pages/movie/movie",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/wenzhang/wenzhang"
-   
+    "pages/wenzhang/wenzhang",
+    "pages/video/video"
   ],
   "window": {
     "backgroundTextStyle": "light",

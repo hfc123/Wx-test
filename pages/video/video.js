@@ -12,9 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+//http://baobab.kaiyanapp.com/api/v1/playUrl?vid=39206&resourceType=video&editionType=default&source=aliyun
+    console.log(options)
     this.setData({
-      url : options.url
+      url: options.url + "?vid=" + options.vid + "&resourceType=" + options.resourceType + "&editionType=" + options.editionType + "&source=" + options.source
     })
   },
 
