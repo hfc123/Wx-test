@@ -78,7 +78,7 @@ Page({
         "Content-Type": "json"
       },
       success:function(res){
-        that.nextPage=res.data.nextPage
+     //   that.nextPage=res.data.nextPage
         var itemlist = []
         for (var i = 0; i < res.data.itemList.length; i++) {
           if (res.data.itemList[i].type == "video") {
@@ -87,6 +87,7 @@ Page({
         }
         that.setData({
           itemlist: itemlist
+          ,nextPage: res.data.nextPageUrl
         })
       },
       fail:function(err){
@@ -96,7 +97,7 @@ Page({
   },
   loadindex:function(){
     wx.request({
-      url: 'http://baobab.kaiyanapp.com/api/v4/tabs/selected',
+      url: 'https://baobab.kaiyanapp.com/api/v1/feed',
       success:function(res) {
         //that.data.nextPage = res.data.nextPageUrl;
         that.setData({
