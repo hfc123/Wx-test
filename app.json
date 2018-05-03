@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/wenzhang/wenzhang",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/map/mymap"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,14 +13,14 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
+  "tabBar": {
     "position": "top",
     "backgroundColor": "#2a579a",
     "color": "#DCEDC8",
     "selectedColor": "#DCEDC8",
     "list": [
       {
-        "pagePath":                        "pages/movie/movie", 
+        "pagePath": "pages/movie/movie",
         "text": "视频"
       },
       {
