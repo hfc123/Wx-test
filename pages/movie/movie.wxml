@@ -1,10 +1,17 @@
 <!--pages/movie/movie.wxml-->
 <view>
 <button bindtap='loadindex'>11111</button>
+<view>
+<swiper indicator-dots="true"  autoplay='true' duration='300' interval='5000'> 
+<swiper-item wx:for="{{bannerlist}}"  wx:key="key">
+<image bindtap='tovideo'  data-albumlist="{{item.playUrl}}" src="{{item.coverForFeed}}"></image>
+</swiper-item>
+</swiper>
+</view>
 <view wx:for="{{itemlist}}" wx:key="key" >
-<view bindtap='tovideo'  data-albumlist="{{item.data.playUrl}}">
-<text>{{item.data.id}}</text>
-<image src="{{item.data.cover.feed}}"></image>
+<view bindtap='tovideo'  data-albumlist="{{item.playUrl}}">
+<text>{{item.id}}</text>
+<image src="{{item.coverForFeed}}"></image>
 </view>
 </view>
 </view>

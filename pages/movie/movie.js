@@ -61,9 +61,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    this.loadmore()
   },
-
+  //下拉刷新
+  onPullDownRefresh() {
+    wx.showNavigationBarLoading(); //在标题栏中显示加载
+    this.loadindex();
+  },
   /**
    * 用户点击右上角分享
    */
@@ -79,10 +83,11 @@ Page({
       },
       success:function(res){
      //   that.nextPage=res.data.nextPage
-        var itemlist = []
-        for (var i = 0; i < res.data.itemList.length; i++) {
-          if (res.data.itemList[i].type == "video") {
-            itemlist.push(res.data.itemList[i]);
+        wx.hideNavigationBarLoading();
+        var itemlist = that.data.itemlist
+        for (var i = 0; i < res.data.dailyList[0].videoList.length; i++) {
+          if (res.data.dailyList[0].videoList[i].dataType == "VideoBeanForClientV1") {
+            itemlist.push(res.data.dailyList[0].videoList[i]);
           }
         }
         that.setData({
@@ -104,9 +109,9 @@ Page({
           nextPage: res.data.nextPageUrl
         })
         var bannerlist=[]
-      for (var i = 0; i < res.data.itemList.length; i++){
-        if (res.data.itemList[i].type =="video"){
-          bannerlist.push(res.data.itemList[i]);
+        for (var i = 0; i < res.data.dailyList[0].videoList.length; i++){
+          if (res.data.dailyList[0].videoList[i].dataType =="VideoBeanForClientV1"){
+            bannerlist.push(res.data.dailyList[0].videoList[i]);
         }     
       }
       that.loadmore();
