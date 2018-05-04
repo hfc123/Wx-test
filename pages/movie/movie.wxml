@@ -1,17 +1,17 @@
 <!--pages/movie/movie.wxml-->
-<view>
-<button bindtap='loadindex'>11111</button>
-<view>
-<swiper indicator-dots="true"  autoplay='true' duration='300' interval='5000'> 
-<swiper-item wx:for="{{bannerlist}}"  wx:key="key">
-<image bindtap='tovideo'  data-albumlist="{{item.playUrl}}" src="{{item.coverForFeed}}"></image>
+<view class='wrap'>
+<view  class='wrap' >
+<swiper indicator-dots="true"  autoplay='true' duration='300' class='wrapswiper' interval='5000'> 
+<swiper-item wx:for="{{bannerlist}}"  wx:key="key" class='wrap'>
+<image class='wrapbanner' bindtap='tovideo'  data-albumlist="{{item.playUrl}}" src="{{item.coverForFeed}}"></image>
 </swiper-item>
 </swiper>
 </view>
-<view wx:for="{{itemlist}}" wx:key="key" >
+<view wx:for="{{itemlist}}" wx:key="key" class='wrap' >
 <view bindtap='tovideo'  data-albumlist="{{item.playUrl}}">
-<text>{{item.id}}</text>
-<image src="{{item.coverForFeed}}"></image>
+<text>标题：{{item.title}}</text>
+<text style='display:block'>详情：{{item.description}}</text>
+<image src="{{item.coverForFeed}}" class='wrap'></image>
 </view>
 </view>
 </view>

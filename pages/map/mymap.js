@@ -1,18 +1,25 @@
 // pages/map/mymap.js
+var bmap=require('../../libs/bmap-wx.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    bmap2:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+  //kyq22lejNlYBnIH67cKBvgX3y70h9Ae6
+    var BMap = new bmap.BMapWX({
+      ak: 'kyq22lejNlYBnIH67cKBvgX3y70h9Ae6'
+    });
+    this.setData({
+      bmap2:BMap
+    })
   },
 
   /**

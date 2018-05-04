@@ -1,1 +1,13 @@
 /* pages/movie/movie.wxss */
+.wrap{
+  width: 100%;
+font-size: 12px
+}
+.wrapbanner{
+  width: 100%;
+  height: 100%
+}
+.wrapswiper{
+   width: 100%;
+  height: 500rpx
+}
