@@ -78,7 +78,7 @@
     if (typeof (process) !== "undefined" && process.versions && process.versions.node) {
         Bmob._isNode = true;
     }
-
+  https://b12dccb7129be63428333efd80e34f92.bmobcloud.com
     /**
    * 初始化时需要调用这个函数。可以从bmob中获取所需的key
    * 
@@ -102,7 +102,7 @@
         Bmob.applicationKey = applicationKey;
         Bmob.masterKey = masterKey;
         Bmob._useMasterKey = true;
-        Bmob.serverURL = "https://" + applicationId + ".bmobcloud.com";
+        Bmob.serverURL = "https://" + 200183 + ".bmobcloud.com";
     };
 
     if (Bmob._isNode) {
