@@ -1,0 +1,24 @@
+<!--pages/map/map.wxml-->
+<view class='wrap'>
+<view class="{{selsectState[0]?'mapSelected':''}}" bindtap='clickFood'>
+<image class="icon1" src='../../img/food.png' ></image>
+  <view class='tabText'>食物</view>   
+
+</view>
+<view class="{{selsectState[1]?'mapSelected':''}}" bindtap='clickHotel'>
+<image class="icon1" src='../../img/hotel.png'></image>
+  <view class='tabText'>酒店</view>   
+</view>
+<view class="{{selsectState[2]?'mapSelected':''}}" bindtap='clickService'>
+<image  class="icon1" src='../../img/keji.png'></image>
+  <view class='tabText'>服务</view>   
+</view>
+</view>
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+<view class="place_info"> 
+  <text>{{placeData.title}}</text> 
+  <text>{{placeData.address}}</text> 
+  <text>{{placeData.telephone}}</text> 
+</view> 

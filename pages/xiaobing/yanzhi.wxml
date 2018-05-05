@@ -1,0 +1,7 @@
+<!--pages/xiaobing/yanzhi.wxml-->
+<button bindtap='getimage' style='width:100%'>选择图片</button>
+<button bindtap='uploadimage'  style='width:100%'>测试颜值</button>
+
+<image src="{{avatarUrl}}" mode='widthFix'></image>
+<text style='display:block'>你的评分是：{{text}}</text>
+<button bindtap='toRank' >查看排行版</button>

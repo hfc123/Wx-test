@@ -1,25 +1,19 @@
-// pages/map/mymap.js
-var bmap=require('../../libs/bmap-wx.js')
+// pages/xiaobing/rank/rank.js
+var Bmob=require("../../../libs/bmob.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    bmap2:''
+    results:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  //kyq22lejNlYBnIH67cKBvgX3y70h9Ae6
-    var BMap = new bmap.BMapWX({
-      ak: 'kyq22lejNlYBnIH67cKBvgX3y70h9Ae6'
-    });
-    this.setData({
-      bmap2:BMap
-    })
+    this.loadAll();
   },
 
   /**
@@ -69,5 +63,29 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  loadAll:function(){
+    var Diary = Bmob.Object.extend("diary");
+    var query = new Bmob.Query(Diary);
+    var that=this;
+    query.descending("deifen");
+    
+    // 查询所有数据
+    query.find({
+      success: function (results) {
+        console.log("共查询到 " + results.length + " 条记录");
+        // 循环处理查询到的数据
+        that. setData({
+          results: results
+        })
+        for (var i = 0; i < results.length; i++) {
+          var object = results[i];
+          console.log(object.id + ' - ' + object.get('title'));
+        }
+      },
+      error: function (error) {
+        console.log("查询失败: " + error.code + " " + error.message);
+      }
+    });
   }
 })

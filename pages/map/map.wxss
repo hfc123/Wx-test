@@ -1,0 +1,30 @@
+/* pages/map/map.wxss */
+.map_container{ 
+    height: 300px; 
+    width: 100%; 
+} 
+
+.map { 
+    height: 100%; 
+    width: 100%; 
+} 
+.icon1{
+   width:100rpx;
+  height:100rpx;
+  margin: 20rpx 70rpx 0;
+}
+.wrap{
+  margin: 0 0 10rpx 10rpx;
+  color:  #666;
+  font-size:15px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+.tabText{
+  margin:0 0 0 90rpx;
+}
+.mapSelected{
+  border: 1px #2a579a solid;
+  border-radius: 20%;
+}

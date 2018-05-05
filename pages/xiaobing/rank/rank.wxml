@@ -1,0 +1,13 @@
+<!--pages/xiaobing/rank/rank.wxml-->
+<text>颜值排行版</text>
+<view calss="wrap" wx:for="{{results}}" wx:key="key">
+<image class='img' src='{{item.img}}'></image>
+<view class='text'>
+<text class='name'>姓名：{{item.nickName}}</text>
+<text  class='name'>得分：{{item.deifen}}</text>
+<text  class='name'>测试年龄：{{item.age}}</text>
+ </view>
+<image class="avatar" src='{{item.avatarUrl}}'></image>
+
+</view>
+

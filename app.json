@@ -1,11 +1,14 @@
 {
   "pages": [
+        "pages/map/map",
+    "pages/xiaobing/yanzhi",
+    "pages/xiaobing/rank/rank",
     "pages/movie/movie",
     "pages/index/index",
     "pages/logs/logs",
     "pages/wenzhang/wenzhang",
-    "pages/video/video",
-    "pages/map/mymap"
+    "pages/video/video"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,6 +29,14 @@
       {
         "pagePath": "pages/wenzhang/wenzhang",
         "text": "文章"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/xiaobing/yanzhi",
+        "text": "颜值"
       }
     ]
   }
