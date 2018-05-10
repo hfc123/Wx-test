@@ -7,7 +7,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+//wx.authorize
     // 登录
     wx.login({
       success: res => {
@@ -18,6 +18,7 @@ App({
     wx.getSetting({
       success: res => {
         //注销这行可以获取信息
+        
       //  if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({

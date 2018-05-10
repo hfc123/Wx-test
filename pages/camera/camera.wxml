@@ -1,0 +1,13 @@
+<!--pages/camera/camera.wxml-->
+
+<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px; position:relative;">
+<cover-view class='img' src="../../img/camera.png">
+<cover-image class='img2' src="../../img/camera.png"></cover-image>
+</cover-view>
+<cover-view>经度{{latitude}}</cover-view>
+<cover-view>纬度{{longitude}}</cover-view>
+<cover-view>地址:{{adress}}</cover-view>
+</camera>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<image src='{{src}}'></image>
+

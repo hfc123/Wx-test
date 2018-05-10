@@ -1,0 +1,3 @@
+<!--pages/camera/image/image.wxml-->
+   <canvas class='myCanvas' canvas-id="myCanvas"  />
+   <button >上传</button>

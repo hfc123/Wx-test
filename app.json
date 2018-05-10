@@ -1,6 +1,9 @@
 {
   "pages": [
-        "pages/map/map",
+    
+      "pages/camera/camera",
+   "pages/camera/image/image",
+    "pages/map/map",
     "pages/xiaobing/yanzhi",
     "pages/xiaobing/rank/rank",
     "pages/movie/movie",
@@ -37,6 +40,10 @@
       {
         "pagePath": "pages/xiaobing/yanzhi",
         "text": "颜值"
+      },
+      {
+        "pagePath": "pages/camera/camera",
+        "text": "水印相机"
       }
     ]
   }

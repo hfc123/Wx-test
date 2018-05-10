@@ -1,0 +1,5 @@
+/* pages/camera/image/image.wxss */
+.myCanvas{
+  height: 1000rpx;
+  border: 1px solid;
+}
